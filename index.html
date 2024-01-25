@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>employee dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" /> -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+</head>
+<body>
+    <div class="create-section">
+        <button id="modal-toggle-btn">Create Employee</button><br><br>
+        <div class="modal hide-modal" id="modal">
+            <span class="material-icons close-icon" id="close-icon">close</span>
+            <div class="modal-body">
+                <form id="employee-form">
+                    <h2>Enter Employee Details</h2>
+                    <input type="text" placeholder="Name of employee" name="fullName">
+                    <input type="text" placeholder="enter email" name="email" required>
+                    <select name="role">
+                        <option value="SDE">SDE</option>
+                        <option value="Product">Product</option>
+                        <option value="Analyist">Analyist</option>
+                    </select>
+                        <input type="date" name="doj">
+                        <div>
+                            <div>
+                                <input type="radio" name="gender" value="Male" id="Male" required>Male
+                            </div>
+                            <div>
+                                <input type="radio" name="gender" value="female" id="female" required>Female
+                            </div>
+                            <div>
+                                <input type="radio" name="gender" value="others" id="others" required>others
+                            </div>
+                        </div>
+                        <button>Add Employee</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <table class="employee-list" id="employee-list">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>employee id</th>
+                <th>role</th>
+                <th>doj</th>
+                <th>gender</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+        </tbody>
+
+    </table>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
